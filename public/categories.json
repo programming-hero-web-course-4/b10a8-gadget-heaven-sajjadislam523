@@ -1,0 +1,28 @@
+{
+    "categories": [
+        {
+            "category_id": "1",
+            "category_name": "Laptops"
+        },
+        {
+            "category_id": "2",
+            "category_name": "Smartphones"
+        },
+        {
+            "category_id": "3",
+            "category_name": "Tablets"
+        },
+        {
+            "category_id": "4",
+            "category_name": "Headphones"
+        },
+        {
+            "category_id": "5",
+            "category_name": "Smartwatches"
+        },
+        {
+            "category_id": "6",
+            "category_name": "Gaming Consoles"
+        }
+    ]
+}
