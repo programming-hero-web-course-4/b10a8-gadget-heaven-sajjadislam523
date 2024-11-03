@@ -3,7 +3,7 @@
         "id": "101",
         "name": "MacBook Pro",
         "image": "https://i.ibb.co.com/NSwT192/macbook-pro.png",
-        "category_id": "2",
+        "category": "Laptops",
         "price": 1500,
         "description": "Apple MacBook Pro with M1 chip.",
         "Specification": [
@@ -19,7 +19,7 @@
         "id": "102",
         "name": "Dell XPS 13",
         "image": "https://i.ibb.co.com/3r3VrCW/dell-xps.webp",
-        "category_id": "2",
+        "category": "Laptops",
         "price": 1200,
         "description": "Dell XPS 13 with Intel i7 processor.",
         "Specification": [
@@ -35,7 +35,7 @@
         "id": "103",
         "name": "HP Spectre x360",
         "image": "https://i.ibb.co.com/LQP9R7R/hp-spectre-x360.webp",
-        "category_id": "2",
+        "category": "Laptops",
         "price": 1400,
         "description": "HP Spectre x360 with 4K OLED display.",
         "Specification": [
@@ -51,7 +51,7 @@
         "id": "104",
         "name": "Asus ROG Zephyrus G14",
         "image": "https://i.ibb.co.com/42TbP64/asus-rog-laptop.webp",
-        "category_id": "2",
+        "category": "Laptops",
         "price": 1500,
         "description": "Gaming laptop with Ryzen 9 and RTX 3060.",
         "Specification": [
@@ -67,7 +67,7 @@
         "id": "201",
         "name": "iPhone 13 Pro",
         "image": "https://i.ibb.co.com/p0DkMNR/iphone-13.png",
-        "category_id": "3",
+        "category": "Smartphones",
         "price": 999,
         "description": "Apple iPhone 13 Pro with 5G connectivity.",
         "Specification": [
@@ -83,7 +83,7 @@
         "id": "202",
         "name": "Samsung Galaxy S21",
         "image": "https://i.ibb.co.com/vxPdjXM/galaxy-s21.jpg",
-        "category_id": "3",
+        "category": "Smartphones",
         "price": 850,
         "description": "Samsung Galaxy S21 with Exynos processor.",
         "Specification": [
@@ -99,7 +99,7 @@
         "id": "203",
         "name": "Google Pixel 6",
         "image": "https://i.ibb.co.com/dpL1YKJ/pixel-6.webp",
-        "category_id": "3",
+        "category": "Smartphones",
         "price": 700,
         "description": "Google Pixel 6 with Google Tensor chip.",
         "Specification": [
@@ -115,7 +115,7 @@
         "id": "204",
         "name": "OnePlus 9 Pro",
         "image": "https://i.ibb.co.com/PZWvF5d/oneplus-9.jpg",
-        "category_id": "3",
+        "category": "Smartphones",
         "price": 900,
         "description": "OnePlus 9 Pro with Snapdragon 888.",
         "Specification": [
@@ -131,7 +131,7 @@
         "id": "301",
         "name": "iPad Pro",
         "image": "https://i.ibb.co.com/25LsBDW/ipad-pro.webp",
-        "category_id": "4",
+        "category": "Tablets",
         "price": 1200,
         "description": "Apple iPad Pro with M1 chip.",
         "Specification": [
@@ -147,7 +147,7 @@
         "id": "302",
         "name": "Samsung Galaxy Tab S7",
         "image": "https://i.ibb.co.com/G0Qr1h5/samsung-tab-s7.jpg",
-        "category_id": "4",
+        "category": "Tablets",
         "price": 700,
         "description": "Samsung Galaxy Tab S7 with S Pen.",
         "Specification": [
@@ -163,7 +163,7 @@
         "id": "303",
         "name": "Microsoft Surface Pro 7",
         "image": "https://i.ibb.co.com/VCb6CPy/micreosoft-surface.webp",
-        "category_id": "4",
+        "category": "Tablets",
         "price": 900,
         "description": "Surface Pro 7 with Intel i5 processor.",
         "Specification": [
@@ -179,7 +179,7 @@
         "id": "401",
         "name": "Sony WH-1000XM4",
         "image": "https://i.ibb.co.com/gdcrL1C/sony-headphone.webp",
-        "category_id": "5",
+        "category": "Headphones",
         "price": 350,
         "description": "Sony WH-1000XM4 wireless noise-canceling headphones.",
         "Specification": [
@@ -195,7 +195,7 @@
         "id": "402",
         "name": "Bose QuietComfort 35 II",
         "image": "https://i.ibb.co.com/rdQvkrQ/bose-headphone.jpg",
-        "category_id": "5",
+        "category": "Headphones",
         "price": 300,
         "description": "Bose QuietComfort 35 II wireless Bluetooth headphones.",
         "Specification": [
@@ -211,7 +211,7 @@
         "id": "403",
         "name": "Apple AirPods Max",
         "image": "https://i.ibb.co.com/2MdvDyb/airpod-max.png",
-        "category_id": "5",
+        "category": "Headphones",
         "price": 549,
         "description": "Apple AirPods Max with spatial audio.",
         "Specification": [
@@ -227,7 +227,7 @@
         "id": "501",
         "name": "Apple Watch Series 7",
         "image": "https://i.ibb.co.com/wRnQKK0/apple-watch-7.jpg",
-        "category_id": "6",
+        "category": "Smartwatches",
         "price": 400,
         "description": "Apple Watch Series 7 with always-on display.",
         "Specification": [
@@ -243,7 +243,7 @@
         "id": "502",
         "name": "Samsung Galaxy Watch 4",
         "image": "https://i.ibb.co.com/j5ggDzm/samsung-watch-4.jpg",
-        "category_id": "6",
+        "category": "Smartwatches",
         "price": 250,
         "description": "Samsung Galaxy Watch 4 with advanced health tracking.",
         "Specification": [
@@ -258,8 +258,8 @@
     {
         "id": "601",
         "name": "PlayStation 5",
-        "image": "https://i.ibb.co.com/8mnt5Rn/ps-5.jpg",
-        "category_id": "7",
+        "image": "https://i.ibb.co/8mnt5Rn/ps-5.jpg",
+        "category": "Gaming",
         "price": 500,
         "description": "Sony PlayStation 5 gaming console.",
         "Specification": [
@@ -275,7 +275,7 @@
         "id": "602",
         "name": "Xbox Series X",
         "image": "https://i.ibb.co.com/FhvLmcZ/xbox-series-x.webp",
-        "category_id": "7",
+        "category": "Gaming",
         "price": 500,
         "description": "Microsoft Xbox Series X gaming console.",
         "Specification": [

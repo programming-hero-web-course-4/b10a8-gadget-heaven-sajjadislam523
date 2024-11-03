@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -29,52 +30,23 @@ const Navbar = () => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
                     >
-                        <li>
-                            <a>Item 1</a>
-                        </li>
-                        <li>
-                            <a>Parent</a>
-                            <ul className="p-2">
-                                <li>
-                                    <a>Submenu 1</a>
-                                </li>
-                                <li>
-                                    <a>Submenu 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a>Item 3</a>
-                        </li>
+                        <NavLink to="">Home</NavLink>
+                        <NavLink to="/statistics">Statistics</NavLink>
+                        <NavLink to="/dashboard">Dashboard</NavLink>
                     </ul>
                 </div>
-                <a className="text-xl btn btn-ghost">daisyUI</a>
+                <a className="text-xl btn btn-ghost">Gadget Heaven</a>
             </div>
             <div className="hidden navbar-center lg:flex">
-                <ul className="px-1 menu menu-horizontal">
-                    <li>
-                        <a>Item 1</a>
-                    </li>
-                    <li>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul className="p-2">
-                                <li>
-                                    <a>Submenu 1</a>
-                                </li>
-                                <li>
-                                    <a>Submenu 2</a>
-                                </li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li>
-                        <a>Item 3</a>
-                    </li>
+                <ul className="gap-4 px-1 menu menu-horizontal">
+                    <NavLink to="">Home</NavLink>
+                    <NavLink to="/statistics">Statistics</NavLink>
+                    <NavLink to="/dashboard">Dashboard</NavLink>
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
+            <div className="gap-4 navbar-end">
+                <Link to="/login">Cart</Link>
+                <Link to="/login">wishlist</Link>
             </div>
         </div>
     );
