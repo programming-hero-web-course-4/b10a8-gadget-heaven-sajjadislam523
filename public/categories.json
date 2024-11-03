@@ -1,28 +1,37 @@
-{
-    "categories": [
-        {
-            "category_id": "1",
-            "category_name": "Laptops"
-        },
-        {
-            "category_id": "2",
-            "category_name": "Smartphones"
-        },
-        {
-            "category_id": "3",
-            "category_name": "Tablets"
-        },
-        {
-            "category_id": "4",
-            "category_name": "Headphones"
-        },
-        {
-            "category_id": "5",
-            "category_name": "Smartwatches"
-        },
-        {
-            "category_id": "6",
-            "category_name": "Gaming Consoles"
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "name": "All Products",
+        "slug": "all-products"
+    },
+    {
+        "id": 2,
+        "name": "Laptops",
+        "slug": "laptops"
+    },
+    {
+        "id": 3,
+        "name": "Smartphones",
+        "slug": "smartphones"
+    },
+    {
+        "id": 4,
+        "name": "Tablets",
+        "slug": "tablets"
+    },
+    {
+        "id": 5,
+        "name": "Headphones",
+        "slug": "headphones"
+    },
+    {
+        "id": 6,
+        "name": "Smartwatches",
+        "slug": "smartwatches"
+    },
+    {
+        "id": 7,
+        "name": "Gaming Consoles",
+        "slug": "gaming-consoles"
+    }
+]

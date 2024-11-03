@@ -1,292 +1,290 @@
-{
-    "products": [
-        {
-            "product_id": "101",
-            "product_title": "MacBook Pro",
-            "product_image": "https://example.com/images/macbook-pro.jpg",
-            "category_id": "1",
-            "price": 1500,
-            "description": "Apple MacBook Pro with M1 chip.",
-            "Specification": [
-                "16GB RAM",
-                "512GB SSD",
-                "13-inch Retina Display",
-                "M1 Chip"
-            ],
-            "availability": true,
-            "rating": 4.8
-        },
-        {
-            "product_id": "102",
-            "product_title": "Dell XPS 13",
-            "product_image": "https://example.com/images/dell-xps-13.jpg",
-            "category_id": "1",
-            "price": 1200,
-            "description": "Dell XPS 13 with Intel i7 processor.",
-            "Specification": [
-                "16GB RAM",
-                "1TB SSD",
-                "13.3-inch FHD Display",
-                "Intel i7 11th Gen"
-            ],
-            "availability": true,
-            "rating": 4.6
-        },
-        {
-            "product_id": "103",
-            "product_title": "HP Spectre x360",
-            "product_image": "https://example.com/images/hp-spectre-x360.jpg",
-            "category_id": "1",
-            "price": 1400,
-            "description": "HP Spectre x360 with 4K OLED display.",
-            "Specification": [
-                "16GB RAM",
-                "512GB SSD",
-                "13.3-inch 4K OLED",
-                "Intel i7 10th Gen"
-            ],
-            "availability": true,
-            "rating": 4.7
-        },
-        {
-            "product_id": "104",
-            "product_title": "Asus ROG Zephyrus G14",
-            "product_image": "https://example.com/images/asus-rog-g14.jpg",
-            "category_id": "1",
-            "price": 1500,
-            "description": "Gaming laptop with Ryzen 9 and RTX 3060.",
-            "Specification": [
-                "16GB RAM",
-                "1TB SSD",
-                "14-inch QHD Display",
-                "Ryzen 9"
-            ],
-            "availability": true,
-            "rating": 4.9
-        },
-        {
-            "product_id": "201",
-            "product_title": "iPhone 13 Pro",
-            "product_image": "https://example.com/images/iphone-13-pro.jpg",
-            "category_id": "2",
-            "price": 999,
-            "description": "Apple iPhone 13 Pro with 5G connectivity.",
-            "Specification": [
-                "6.1-inch Display",
-                "128GB Storage",
-                "A15 Bionic Chip",
-                "Triple Camera"
-            ],
-            "availability": true,
-            "rating": 4.9
-        },
-        {
-            "product_id": "202",
-            "product_title": "Samsung Galaxy S21",
-            "product_image": "https://example.com/images/galaxy-s21.jpg",
-            "category_id": "2",
-            "price": 850,
-            "description": "Samsung Galaxy S21 with Exynos processor.",
-            "Specification": [
-                "6.2-inch Display",
-                "128GB Storage",
-                "Exynos 2100",
-                "Triple Camera"
-            ],
-            "availability": true,
-            "rating": 4.7
-        },
-        {
-            "product_id": "203",
-            "product_title": "Google Pixel 6",
-            "product_image": "https://example.com/images/pixel-6.jpg",
-            "category_id": "2",
-            "price": 700,
-            "description": "Google Pixel 6 with Google Tensor chip.",
-            "Specification": [
-                "6.4-inch Display",
-                "128GB Storage",
-                "Google Tensor",
-                "Dual Camera"
-            ],
-            "availability": true,
-            "rating": 4.8
-        },
-        {
-            "product_id": "204",
-            "product_title": "OnePlus 9 Pro",
-            "product_image": "https://example.com/images/oneplus-9-pro.jpg",
-            "category_id": "2",
-            "price": 900,
-            "description": "OnePlus 9 Pro with Snapdragon 888.",
-            "Specification": [
-                "6.7-inch QHD+ Display",
-                "256GB Storage",
-                "Snapdragon 888",
-                "Quad Camera"
-            ],
-            "availability": true,
-            "rating": 4.6
-        },
-        {
-            "product_id": "301",
-            "product_title": "iPad Pro",
-            "product_image": "https://example.com/images/ipad-pro.jpg",
-            "category_id": "3",
-            "price": 1200,
-            "description": "Apple iPad Pro with M1 chip.",
-            "Specification": [
-                "11-inch Display",
-                "128GB Storage",
-                "M1 Chip",
-                "Face ID"
-            ],
-            "availability": true,
-            "rating": 4.8
-        },
-        {
-            "product_id": "302",
-            "product_title": "Samsung Galaxy Tab S7",
-            "product_image": "https://example.com/images/galaxy-tab-s7.jpg",
-            "category_id": "3",
-            "price": 700,
-            "description": "Samsung Galaxy Tab S7 with S Pen.",
-            "Specification": [
-                "11-inch Display",
-                "128GB Storage",
-                "Snapdragon 865+",
-                "S Pen included"
-            ],
-            "availability": true,
-            "rating": 4.7
-        },
-        {
-            "product_id": "303",
-            "product_title": "Microsoft Surface Pro 7",
-            "product_image": "https://example.com/images/surface-pro-7.jpg",
-            "category_id": "3",
-            "price": 900,
-            "description": "Surface Pro 7 with Intel i5 processor.",
-            "Specification": [
-                "12.3-inch Display",
-                "8GB RAM",
-                "128GB SSD",
-                "Intel i5"
-            ],
-            "availability": true,
-            "rating": 4.5
-        },
-        {
-            "product_id": "401",
-            "product_title": "Sony WH-1000XM4",
-            "product_image": "https://example.com/images/sony-wh1000xm4.jpg",
-            "category_id": "4",
-            "price": 350,
-            "description": "Sony WH-1000XM4 wireless noise-canceling headphones.",
-            "Specification": [
-                "Noise Cancellation",
-                "30 Hours Battery Life",
-                "Wireless",
-                "Quick Charge"
-            ],
-            "availability": true,
-            "rating": 4.9
-        },
-        {
-            "product_id": "402",
-            "product_title": "Bose QuietComfort 35 II",
-            "product_image": "https://example.com/images/bose-qc35.jpg",
-            "category_id": "4",
-            "price": 300,
-            "description": "Bose QuietComfort 35 II wireless Bluetooth headphones.",
-            "Specification": [
-                "Noise Cancellation",
-                "20 Hours Battery Life",
-                "Wireless",
-                "Alexa Voice Control"
-            ],
-            "availability": true,
-            "rating": 4.8
-        },
-        {
-            "product_id": "403",
-            "product_title": "Apple AirPods Max",
-            "product_image": "https://example.com/images/airpods-max.jpg",
-            "category_id": "4",
-            "price": 549,
-            "description": "Apple AirPods Max with spatial audio.",
-            "Specification": [
-                "Noise Cancellation",
-                "20 Hours Battery Life",
-                "Spatial Audio",
-                "High-Fidelity Sound"
-            ],
-            "availability": true,
-            "rating": 4.7
-        },
-        {
-            "product_id": "501",
-            "product_title": "Apple Watch Series 7",
-            "product_image": "https://example.com/images/apple-watch-7.jpg",
-            "category_id": "5",
-            "price": 400,
-            "description": "Apple Watch Series 7 with always-on display.",
-            "Specification": [
-                "GPS + Cellular",
-                "Always-On Retina Display",
-                "Water Resistant",
-                "Heart Rate Monitor"
-            ],
-            "availability": true,
-            "rating": 4.8
-        },
-        {
-            "product_id": "502",
-            "product_title": "Samsung Galaxy Watch 4",
-            "product_image": "https://example.com/images/galaxy-watch-4.jpg",
-            "category_id": "5",
-            "price": 250,
-            "description": "Samsung Galaxy Watch 4 with advanced health tracking.",
-            "Specification": [
-                "Wear OS",
-                "Body Composition Analysis",
-                "GPS",
-                "Heart Rate Monitor"
-            ],
-            "availability": true,
-            "rating": 4.7
-        },
-        {
-            "product_id": "601",
-            "product_title": "PlayStation 5",
-            "product_image": "https://example.com/images/ps5.jpg",
-            "category_id": "6",
-            "price": 500,
-            "description": "Sony PlayStation 5 gaming console.",
-            "Specification": [
-                "4K Gaming",
-                "Ultra High-Speed SSD",
-                "DualSense Controller",
-                "Ray Tracing"
-            ],
-            "availability": false,
-            "rating": 4.9
-        },
-        {
-            "product_id": "602",
-            "product_title": "Xbox Series X",
-            "product_image": "https://example.com/images/xbox-series-x.jpg",
-            "category_id": "6",
-            "price": 500,
-            "description": "Microsoft Xbox Series X gaming console.",
-            "Specification": [
-                "4K Gaming",
-                "1TB SSD",
-                "Xbox Game Pass",
-                "Ray Tracing"
-            ],
-            "availability": true,
-            "rating": 4.8
-        }
-    ]
-}
+[
+    {
+        "id": "101",
+        "name": "MacBook Pro",
+        "image": "https://i.ibb.co.com/NSwT192/macbook-pro.png",
+        "category_id": "2",
+        "price": 1500,
+        "description": "Apple MacBook Pro with M1 chip.",
+        "Specification": [
+            "16GB RAM",
+            "512GB SSD",
+            "13-inch Retina Display",
+            "M1 Chip"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "id": "102",
+        "name": "Dell XPS 13",
+        "image": "https://i.ibb.co.com/3r3VrCW/dell-xps.webp",
+        "category_id": "2",
+        "price": 1200,
+        "description": "Dell XPS 13 with Intel i7 processor.",
+        "Specification": [
+            "16GB RAM",
+            "1TB SSD",
+            "13.3-inch FHD Display",
+            "Intel i7 11th Gen"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "id": "103",
+        "name": "HP Spectre x360",
+        "image": "https://i.ibb.co.com/LQP9R7R/hp-spectre-x360.webp",
+        "category_id": "2",
+        "price": 1400,
+        "description": "HP Spectre x360 with 4K OLED display.",
+        "Specification": [
+            "16GB RAM",
+            "512GB SSD",
+            "13.3-inch 4K OLED",
+            "Intel i7 10th Gen"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "id": "104",
+        "name": "Asus ROG Zephyrus G14",
+        "image": "https://i.ibb.co.com/42TbP64/asus-rog-laptop.webp",
+        "category_id": "2",
+        "price": 1500,
+        "description": "Gaming laptop with Ryzen 9 and RTX 3060.",
+        "Specification": [
+            "16GB RAM",
+            "1TB SSD",
+            "14-inch QHD Display",
+            "Ryzen 9"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "id": "201",
+        "name": "iPhone 13 Pro",
+        "image": "https://i.ibb.co.com/p0DkMNR/iphone-13.png",
+        "category_id": "3",
+        "price": 999,
+        "description": "Apple iPhone 13 Pro with 5G connectivity.",
+        "Specification": [
+            "6.1-inch Display",
+            "128GB Storage",
+            "A15 Bionic Chip",
+            "Triple Camera"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "id": "202",
+        "name": "Samsung Galaxy S21",
+        "image": "https://i.ibb.co.com/vxPdjXM/galaxy-s21.jpg",
+        "category_id": "3",
+        "price": 850,
+        "description": "Samsung Galaxy S21 with Exynos processor.",
+        "Specification": [
+            "6.2-inch Display",
+            "128GB Storage",
+            "Exynos 2100",
+            "Triple Camera"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "id": "203",
+        "name": "Google Pixel 6",
+        "image": "https://i.ibb.co.com/dpL1YKJ/pixel-6.webp",
+        "category_id": "3",
+        "price": 700,
+        "description": "Google Pixel 6 with Google Tensor chip.",
+        "Specification": [
+            "6.4-inch Display",
+            "128GB Storage",
+            "Google Tensor",
+            "Dual Camera"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "id": "204",
+        "name": "OnePlus 9 Pro",
+        "image": "https://i.ibb.co.com/PZWvF5d/oneplus-9.jpg",
+        "category_id": "3",
+        "price": 900,
+        "description": "OnePlus 9 Pro with Snapdragon 888.",
+        "Specification": [
+            "6.7-inch QHD+ Display",
+            "256GB Storage",
+            "Snapdragon 888",
+            "Quad Camera"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "id": "301",
+        "name": "iPad Pro",
+        "image": "https://i.ibb.co.com/25LsBDW/ipad-pro.webp",
+        "category_id": "4",
+        "price": 1200,
+        "description": "Apple iPad Pro with M1 chip.",
+        "Specification": [
+            "11-inch Display",
+            "128GB Storage",
+            "M1 Chip",
+            "Face ID"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "id": "302",
+        "name": "Samsung Galaxy Tab S7",
+        "image": "https://i.ibb.co.com/G0Qr1h5/samsung-tab-s7.jpg",
+        "category_id": "4",
+        "price": 700,
+        "description": "Samsung Galaxy Tab S7 with S Pen.",
+        "Specification": [
+            "11-inch Display",
+            "128GB Storage",
+            "Snapdragon 865+",
+            "S Pen included"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "id": "303",
+        "name": "Microsoft Surface Pro 7",
+        "image": "https://i.ibb.co.com/VCb6CPy/micreosoft-surface.webp",
+        "category_id": "4",
+        "price": 900,
+        "description": "Surface Pro 7 with Intel i5 processor.",
+        "Specification": [
+            "12.3-inch Display",
+            "8GB RAM",
+            "128GB SSD",
+            "Intel i5"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "id": "401",
+        "name": "Sony WH-1000XM4",
+        "image": "https://i.ibb.co.com/gdcrL1C/sony-headphone.webp",
+        "category_id": "5",
+        "price": 350,
+        "description": "Sony WH-1000XM4 wireless noise-canceling headphones.",
+        "Specification": [
+            "Noise Cancellation",
+            "30 Hours Battery Life",
+            "Wireless",
+            "Quick Charge"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "id": "402",
+        "name": "Bose QuietComfort 35 II",
+        "image": "https://i.ibb.co.com/rdQvkrQ/bose-headphone.jpg",
+        "category_id": "5",
+        "price": 300,
+        "description": "Bose QuietComfort 35 II wireless Bluetooth headphones.",
+        "Specification": [
+            "Noise Cancellation",
+            "20 Hours Battery Life",
+            "Wireless",
+            "Alexa Voice Control"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "id": "403",
+        "name": "Apple AirPods Max",
+        "image": "https://i.ibb.co.com/2MdvDyb/airpod-max.png",
+        "category_id": "5",
+        "price": 549,
+        "description": "Apple AirPods Max with spatial audio.",
+        "Specification": [
+            "Noise Cancellation",
+            "20 Hours Battery Life",
+            "Spatial Audio",
+            "High-Fidelity Sound"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "id": "501",
+        "name": "Apple Watch Series 7",
+        "image": "https://i.ibb.co.com/wRnQKK0/apple-watch-7.jpg",
+        "category_id": "6",
+        "price": 400,
+        "description": "Apple Watch Series 7 with always-on display.",
+        "Specification": [
+            "GPS + Cellular",
+            "Always-On Retina Display",
+            "Water Resistant",
+            "Heart Rate Monitor"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "id": "502",
+        "name": "Samsung Galaxy Watch 4",
+        "image": "https://i.ibb.co.com/j5ggDzm/samsung-watch-4.jpg",
+        "category_id": "6",
+        "price": 250,
+        "description": "Samsung Galaxy Watch 4 with advanced health tracking.",
+        "Specification": [
+            "Wear OS",
+            "Body Composition Analysis",
+            "GPS",
+            "Heart Rate Monitor"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "id": "601",
+        "name": "PlayStation 5",
+        "image": "https://i.ibb.co.com/8mnt5Rn/ps-5.jpg",
+        "category_id": "7",
+        "price": 500,
+        "description": "Sony PlayStation 5 gaming console.",
+        "Specification": [
+            "4K Gaming",
+            "Ultra High-Speed SSD",
+            "DualSense Controller",
+            "Ray Tracing"
+        ],
+        "availability": false,
+        "rating": 4.9
+    },
+    {
+        "id": "602",
+        "name": "Xbox Series X",
+        "image": "https://i.ibb.co.com/FhvLmcZ/xbox-series-x.webp",
+        "category_id": "7",
+        "price": 500,
+        "description": "Microsoft Xbox Series X gaming console.",
+        "Specification": [
+            "4K Gaming",
+            "1TB SSD",
+            "Xbox Game Pass",
+            "Ray Tracing"
+        ],
+        "availability": true,
+        "rating": 4.8
+    }
+]
