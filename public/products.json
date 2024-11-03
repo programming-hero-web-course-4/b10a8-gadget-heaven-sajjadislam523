@@ -6,7 +6,7 @@
         "category": "Laptops",
         "price": 1500,
         "description": "Apple MacBook Pro with M1 chip.",
-        "Specification": [
+        "specification": [
             "16GB RAM",
             "512GB SSD",
             "13-inch Retina Display",
@@ -22,7 +22,7 @@
         "category": "Laptops",
         "price": 1200,
         "description": "Dell XPS 13 with Intel i7 processor.",
-        "Specification": [
+        "specification": [
             "16GB RAM",
             "1TB SSD",
             "13.3-inch FHD Display",
@@ -38,7 +38,7 @@
         "category": "Laptops",
         "price": 1400,
         "description": "HP Spectre x360 with 4K OLED display.",
-        "Specification": [
+        "specification": [
             "16GB RAM",
             "512GB SSD",
             "13.3-inch 4K OLED",
@@ -54,7 +54,7 @@
         "category": "Laptops",
         "price": 1500,
         "description": "Gaming laptop with Ryzen 9 and RTX 3060.",
-        "Specification": [
+        "specification": [
             "16GB RAM",
             "1TB SSD",
             "14-inch QHD Display",
@@ -70,7 +70,7 @@
         "category": "Smartphones",
         "price": 999,
         "description": "Apple iPhone 13 Pro with 5G connectivity.",
-        "Specification": [
+        "specification": [
             "6.1-inch Display",
             "128GB Storage",
             "A15 Bionic Chip",
@@ -86,7 +86,7 @@
         "category": "Smartphones",
         "price": 850,
         "description": "Samsung Galaxy S21 with Exynos processor.",
-        "Specification": [
+        "specification": [
             "6.2-inch Display",
             "128GB Storage",
             "Exynos 2100",
@@ -102,7 +102,7 @@
         "category": "Smartphones",
         "price": 700,
         "description": "Google Pixel 6 with Google Tensor chip.",
-        "Specification": [
+        "specification": [
             "6.4-inch Display",
             "128GB Storage",
             "Google Tensor",
@@ -118,7 +118,7 @@
         "category": "Smartphones",
         "price": 900,
         "description": "OnePlus 9 Pro with Snapdragon 888.",
-        "Specification": [
+        "specification": [
             "6.7-inch QHD+ Display",
             "256GB Storage",
             "Snapdragon 888",
@@ -134,7 +134,7 @@
         "category": "Tablets",
         "price": 1200,
         "description": "Apple iPad Pro with M1 chip.",
-        "Specification": [
+        "specification": [
             "11-inch Display",
             "128GB Storage",
             "M1 Chip",
@@ -150,7 +150,7 @@
         "category": "Tablets",
         "price": 700,
         "description": "Samsung Galaxy Tab S7 with S Pen.",
-        "Specification": [
+        "specification": [
             "11-inch Display",
             "128GB Storage",
             "Snapdragon 865+",
@@ -166,7 +166,7 @@
         "category": "Tablets",
         "price": 900,
         "description": "Surface Pro 7 with Intel i5 processor.",
-        "Specification": [
+        "specification": [
             "12.3-inch Display",
             "8GB RAM",
             "128GB SSD",
@@ -182,7 +182,7 @@
         "category": "Headphones",
         "price": 350,
         "description": "Sony WH-1000XM4 wireless noise-canceling headphones.",
-        "Specification": [
+        "specification": [
             "Noise Cancellation",
             "30 Hours Battery Life",
             "Wireless",
@@ -198,7 +198,7 @@
         "category": "Headphones",
         "price": 300,
         "description": "Bose QuietComfort 35 II wireless Bluetooth headphones.",
-        "Specification": [
+        "specification": [
             "Noise Cancellation",
             "20 Hours Battery Life",
             "Wireless",
@@ -214,7 +214,7 @@
         "category": "Headphones",
         "price": 549,
         "description": "Apple AirPods Max with spatial audio.",
-        "Specification": [
+        "specification": [
             "Noise Cancellation",
             "20 Hours Battery Life",
             "Spatial Audio",
@@ -230,7 +230,7 @@
         "category": "Smartwatches",
         "price": 400,
         "description": "Apple Watch Series 7 with always-on display.",
-        "Specification": [
+        "specification": [
             "GPS + Cellular",
             "Always-On Retina Display",
             "Water Resistant",
@@ -246,7 +246,7 @@
         "category": "Smartwatches",
         "price": 250,
         "description": "Samsung Galaxy Watch 4 with advanced health tracking.",
-        "Specification": [
+        "specification": [
             "Wear OS",
             "Body Composition Analysis",
             "GPS",
@@ -262,7 +262,7 @@
         "category": "Gaming",
         "price": 500,
         "description": "Sony PlayStation 5 gaming console.",
-        "Specification": [
+        "specification": [
             "4K Gaming",
             "Ultra High-Speed SSD",
             "DualSense Controller",
@@ -278,7 +278,7 @@
         "category": "Gaming",
         "price": 500,
         "description": "Microsoft Xbox Series X gaming console.",
-        "Specification": [
+        "specification": [
             "4K Gaming",
             "1TB SSD",
             "Xbox Game Pass",

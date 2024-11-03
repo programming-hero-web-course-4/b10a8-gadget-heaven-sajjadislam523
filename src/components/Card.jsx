@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Card = ({ product }) => {
     return (
@@ -16,9 +17,12 @@ const Card = ({ product }) => {
             <h1 className="text-[#09080F99] text-lg font-medium font-sora">
                 Price: ${product.price}
             </h1>
-            <button className="font-sora text-[#9538E2] border px-4 py-2 border-[#9538E2] font-semibold hover:bg-[#9538E2] hover:border-transparent hover:text-white transition-all duration-200 ease-in-out rounded-full hover:scale-105">
+            <Link
+                to={`/product/${product.id}`}
+                className="font-sora text-[#9538E2] border px-4 py-2 border-[#9538E2] font-semibold hover:bg-[#9538E2] hover:border-transparent hover:text-white transition-all duration-200 ease-in-out rounded-full hover:scale-105"
+            >
                 View Details
-            </button>
+            </Link>
         </div>
     );
 };

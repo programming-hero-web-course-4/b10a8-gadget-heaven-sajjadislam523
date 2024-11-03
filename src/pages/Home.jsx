@@ -1,8 +1,8 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import { Outlet, useLoaderData } from "react-router-dom";
-import Header from "../components/Header";
 import Banner from "../components/Banner";
+import Header from "../components/Header";
 
 const Home = () => {
     const categories = useLoaderData();
