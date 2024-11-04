@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { BsCart3 } from "react-icons/bs";
+import { FiHeart } from "react-icons/fi";
+import { addToCart, addToFavorite } from "../utils/Index";
 
 const ProductDetails = () => {
     const data = useLoaderData();
@@ -21,6 +24,14 @@ const ProductDetails = () => {
         availability,
         rating,
     } = product;
+
+    const handleAddToCart = (id) => {
+        addToCart(id);
+    };
+
+    const handleAddToFavorite = (id) => {
+        addToFavorite(id);
+    };
 
     return (
         <div>
@@ -51,9 +62,20 @@ const ProductDetails = () => {
                     <p>{description}</p>
                     <p>Specification: {specification}</p>
                     <p>Rating: {rating}</p>
-                    <div>
-                        <button>Add to Cart</button>
-                        <button>Wishlist</button>
+                    <div className="flex items-center gap-4">
+                        <button
+                            onClick={() => handleAddToCart(id)}
+                            className="flex items-center gap-2 px-4 py-2 text-lg font-bold border rounded-full font-sora bg-[#9538E2] text-white hover:bg-white hover:text-[#9538E2] transition-all duration-200 ease-in-out"
+                        >
+                            Add to Cart
+                            <BsCart3 />
+                        </button>
+                        <button
+                            onClick={() => handleAddToFavorite(id)}
+                            className="p-3 border rounded-full"
+                        >
+                            <FiHeart />
+                        </button>
                     </div>
                 </div>
             </div>
