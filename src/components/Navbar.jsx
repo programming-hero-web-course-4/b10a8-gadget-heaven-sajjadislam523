@@ -33,7 +33,7 @@ const Navbar = () => {
         <div
             className={`navbar lg:px-12 md:px-10 ${
                 isHome
-                    ? "absolute w-full max-w-screen-xl px-10 mx-auto text-white"
+                    ? "absolute w-full px-10 mx-auto text-white"
                     : "bg-white shadow-lg text-gray-800"
             }`}
         >
@@ -119,18 +119,18 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <div className="flex gap-4 navbar-end">
+            <div className="flex gap-3 lg:pr-4 navbar-end">
                 <Link
                     to="/dashboard"
                     className="p-2 transition border rounded-full hover:bg-gray-100"
                 >
-                    <BsCart3 className="text-xl" />
+                    <BsCart3 className="" />
                 </Link>
                 <Link
                     to="/favorites"
                     className="p-2 transition border rounded-full hover:bg-gray-100"
                 >
-                    <FiHeart className="text-xl" />
+                    <FiHeart className="" />
                 </Link>
             </div>
         </div>

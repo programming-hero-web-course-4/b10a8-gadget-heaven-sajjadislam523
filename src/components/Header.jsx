@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
     return (
-        <div className="mx-6 rounded-xl pt-8 pb-20 lg:mx-12 bg-[#9538E2] text-white">
+        <div className="mx-6 rounded-xl mt-8 pt-8 pb-20 lg:mx-12 bg-[#9538E2] text-white">
             <div className="flex flex-col items-center w-4/5 gap-4 px-4 pt-8 pb-24 mx-auto md:pb-40 rounded-xl">
                 <h1 className="text-xl font-bold text-center lg:leading-normal font-sora lg:text-5xl md:text-3xl">
                     Upgrade Your Tech Accessorize with Gadget Heaven Accessories

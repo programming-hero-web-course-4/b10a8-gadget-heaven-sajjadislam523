@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { useLoaderData, NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLoaderData, Outlet, useNavigate } from "react-router-dom";
 import { getCartData, getFavoriteData } from "../utils/Index";
 
 const Dashboard = () => {
+    const products = useLoaderData();
     const [cartItem, setCartItem] = useState([]);
     const [favoriteItem, setFavoriteItem] = useState([]);
-    const products = useLoaderData();
+    const [activeTab, setActiveTab] = useState("cart");
+    const navigate = useNavigate();
 
     useEffect(() => {
         const storedCartItems = getCartData();
@@ -13,9 +15,7 @@ const Dashboard = () => {
             storedCartItems.includes(product.id)
         );
         setCartItem(cartItems);
-    }, [products]);
 
-    useEffect(() => {
         const storedFavoriteItems = getFavoriteData();
         const favoriteItems = products.filter((product) =>
             storedFavoriteItems.includes(product.id)
@@ -23,10 +23,9 @@ const Dashboard = () => {
         setFavoriteItem(favoriteItems);
     }, [products]);
 
-    const handleSort = () => {
-        const sortedItems = [...cartItem].sort((a, b) => b.price - a.price);
-        setCartItem(sortedItems);
-    };
+    useEffect(() => {
+        navigate(activeTab === "cart" ? "cart" : "wishlist");
+    }, [activeTab, navigate]);
 
     return (
         <div>
@@ -42,38 +41,30 @@ const Dashboard = () => {
                     the coolest accessories, we have it all!
                 </p>
                 <div className="flex gap-2 sm:gap-4">
-                    <NavLink className="px-4 py-1 text-xs border rounded-full sm:px-6 sm:text-sm lg:text-base">
+                    <button
+                        onClick={() => setActiveTab("cart")}
+                        className={`px-4 py-1 text-xs border rounded-full sm:px-6 font-sora sm:text-sm lg:text-base ${
+                            activeTab === "cart"
+                                ? "bg-white text-[#9538E2] font-bold"
+                                : ""
+                        }`}
+                    >
                         Cart
-                    </NavLink>
-                    <NavLink className="px-4 py-1 text-xs border rounded-full sm:px-6 sm:text-sm lg:text-base">
+                    </button>
+                    <button
+                        onClick={() => setActiveTab("wishlist")}
+                        className={`px-4 py-1 text-xs border rounded-full sm:px-6 sm:text-sm font-sora lg:text-base ${
+                            activeTab === "wishlist"
+                                ? "bg-white text-[#9538E2] font-bold"
+                                : ""
+                        }`}
+                    >
                         Wishlist
-                    </NavLink>
+                    </button>
                 </div>
             </div>
-
-            {/* Cart Section */}
-            <div className="flex flex-col px-4 py-4 space-y-4 md:flex-row md:items-center md:justify-between sm:px-8 sm:py-8 md:space-y-0">
-                <h1 className="text-base font-bold md:text-lg lg:text-xl font-sora">
-                    Cart
-                </h1>
-                <div className="flex flex-col items-start gap-2 md:items-center sm:flex-row sm:gap-4">
-                    <p className="text-xs sm:text-sm lg:text-base font-sora">
-                        Total cost: $
-                        {cartItem.reduce(
-                            (total, item) => total + item.price,
-                            0
-                        )}
-                    </p>
-                    <button
-                        onClick={handleSort}
-                        className="px-3 sm:px-4 py-1 sm:py-2 rounded-full font-semibold text-xs sm:text-sm lg:text-base font-sora border border-[#9538E2] text-[#9538E2]"
-                    >
-                        Sort by Price
-                    </button>
-                    <button className="px-3 sm:px-4 py-1 sm:py-2 rounded-full font-semibold text-xs sm:text-sm lg:text-base font-sora bg-[#9538E2] text-white">
-                        Purchase
-                    </button>
-                </div>
+            <div className="pb-20">
+                <Outlet context={{ cartItem, favoriteItem }} />
             </div>
         </div>
     );

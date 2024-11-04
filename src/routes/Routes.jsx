@@ -5,6 +5,8 @@ import Dashboard from "../pages/Dashboard";
 import Layout from "../layouts/Layout";
 import ProductCards from "../components/ProductCards";
 import ProductDetails from "../pages/ProductDetails";
+import Cart from "../components/Cart";
+import WishList from "../components/WishList";
 
 const routes = createBrowserRouter([
     {
@@ -36,6 +38,16 @@ const routes = createBrowserRouter([
                 path: "dashboard",
                 element: <Dashboard />,
                 loader: () => fetch("../products.json"),
+                children: [
+                    {
+                        path: "cart",
+                        element: <Cart />,
+                    },
+                    {
+                        path: "wishlist",
+                        element: <WishList />,
+                    },
+                ],
             },
             {
                 path: "/product/:id",
