@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, Outlet, useNavigate } from "react-router-dom";
+import {
+    useLoaderData,
+    Outlet,
+    useNavigate,
+    useLocation,
+} from "react-router-dom";
 import {
     getCartData,
     getFavoriteData,
@@ -12,8 +17,11 @@ const Dashboard = () => {
     const products = useLoaderData();
     const [cartItem, setCartItem] = useState([]);
     const [favoriteItem, setFavoriteItem] = useState([]);
-    const [activeTab, setActiveTab] = useState("cart");
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const isCart = location.pathname.endsWith("/cart");
+    const isFavorite = location.pathname.endsWith("/wishlist");
 
     useEffect(() => {
         const storedCartItems = getCartData();
@@ -29,10 +37,6 @@ const Dashboard = () => {
         setFavoriteItem(favoriteItems);
     }, [products]);
 
-    useEffect(() => {
-        navigate(activeTab === "cart" ? "cart" : "wishlist");
-    }, [activeTab, navigate]);
-
     const handleRemoveCartItem = (productId) => {
         removeCartItem(productId);
         setCartItem(cartItem.filter((item) => item.id !== productId));
@@ -43,6 +47,12 @@ const Dashboard = () => {
         setFavoriteItem(favoriteItem.filter((item) => item.id !== productId));
     };
 
+    useEffect(() => {
+        if (location.pathname === "/dashboard") {
+            navigate("cart", { replace: true });
+        }
+    }, [location, navigate]);
+
     const handleClearCart = () => {
         clearCart();
         setCartItem([]);
@@ -50,7 +60,6 @@ const Dashboard = () => {
 
     return (
         <div>
-            {/* Header Section */}
             <div className="flex flex-col items-center bg-[#9538E2] text-white py-6 md:py-8 lg:py-12 space-y-4 md:space-y-8">
                 <h1 className="text-lg font-bold md:text-2xl lg:text-3xl font-sora">
                     Dashboard
@@ -63,19 +72,17 @@ const Dashboard = () => {
                 </p>
                 <div className="flex gap-2 sm:gap-4">
                     <button
-                        onClick={() => setActiveTab("cart")}
+                        onClick={() => navigate("cart")}
                         className={`px-4 py-1 text-xs border rounded-full sm:px-6 font-sora sm:text-sm lg:text-base ${
-                            activeTab === "cart"
-                                ? "bg-white text-[#9538E2] font-bold"
-                                : ""
+                            isCart ? "bg-white text-[#9538E2] font-bold" : ""
                         }`}
                     >
                         Cart
                     </button>
                     <button
-                        onClick={() => setActiveTab("wishlist")}
+                        onClick={() => navigate("wishlist")}
                         className={`px-4 py-1 text-xs border rounded-full sm:px-6 sm:text-sm font-sora lg:text-base ${
-                            activeTab === "wishlist"
+                            isFavorite
                                 ? "bg-white text-[#9538E2] font-bold"
                                 : ""
                         }`}

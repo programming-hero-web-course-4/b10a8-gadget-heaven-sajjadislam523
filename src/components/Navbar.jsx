@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { FiHeart } from "react-icons/fi";
+import { getCartData, getFavoriteData } from "../utils/Index";
 
 const Navbar = () => {
     const location = useLocation();
+    const [cartCount, setCartCount] = useState(0);
+    const [favoriteCount, setFavoriteCount] = useState(0);
+
     const isHome =
         location.pathname === "/" ||
         location.pathname === "/category/All%20Products" ||
@@ -28,6 +32,11 @@ const Navbar = () => {
                   }`
         }`;
     };
+
+    useEffect(() => {
+        setCartCount(getCartData().length);
+        setFavoriteCount(getFavoriteData().length);
+    }, [cartCount, favoriteCount]);
 
     return (
         <div
@@ -121,16 +130,26 @@ const Navbar = () => {
 
             <div className="flex gap-3 lg:pr-4 navbar-end">
                 <Link
-                    to="/dashboard"
-                    className="p-2 transition border rounded-full hover:bg-gray-100"
+                    to="/dashboard/cart"
+                    className="p-2 text-black transition bg-white border rounded-full hover:bg-gray-100"
                 >
-                    <BsCart3 className="" />
+                    <BsCart3 />
+                    {cartCount > 0 && (
+                        <span className="absolute inline-flex items-center justify-center w-5 h-5 text-xs text-white bg-red-500 rounded-full top-1 lg:right-[101px] right-11">
+                            {cartCount}
+                        </span>
+                    )}
                 </Link>
                 <Link
-                    to="/favorites"
-                    className="p-2 transition border rounded-full hover:bg-gray-100"
+                    to="/dashboard/wishlist"
+                    className="p-2 text-black transition bg-white border rounded-full hover:bg-gray-100"
                 >
-                    <FiHeart className="" />
+                    <FiHeart />
+                    {favoriteCount > 0 && (
+                        <span className="absolute inline-flex items-center justify-center w-5 h-5 text-xs text-white bg-red-500 rounded-full top-1 lg:right-14 right-1">
+                            {favoriteCount}
+                        </span>
+                    )}
                 </Link>
             </div>
         </div>
