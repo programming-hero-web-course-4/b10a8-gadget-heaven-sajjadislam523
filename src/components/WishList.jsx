@@ -5,7 +5,7 @@ import { BsCart3 } from "react-icons/bs";
 import { IoCloseOutline } from "react-icons/io5";
 
 const WishList = () => {
-    const { favoriteItem } = useOutletContext();
+    const { favoriteItem, handleRemoveFavoriteItem } = useOutletContext();
 
     const handleAddToCart = (id) => {
         addToCart(id);
@@ -40,7 +40,12 @@ const WishList = () => {
                                     <h2 className="text-xl font-bold text-gray-800">
                                         {item.name}
                                     </h2>
-                                    <button className="p-1 text-red-800 border border-red-800 rounded-full ">
+                                    <button
+                                        onClick={() =>
+                                            handleRemoveFavoriteItem(item.id)
+                                        }
+                                        className="p-1 text-red-800 border border-red-800 rounded-full "
+                                    >
                                         <IoCloseOutline className="text-2xl" />
                                     </button>
                                 </div>

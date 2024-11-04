@@ -22,6 +22,17 @@ const addToCart = (id) => {
     }
 };
 
+const removeCartItem = (id) => {
+    const cartData = getCartData();
+    const remaining = cartData.filter(cartId => cartId !== id)
+    localStorage.setItem("cart", JSON.stringify(remaining));
+}
+
+const clearCart = () => {
+    localStorage.removeItem("cart");
+}
+
+
 const getFavoriteData = () => {
     const favoriteData = localStorage.getItem("favorite");
     if (favoriteData) {
@@ -45,5 +56,11 @@ const addToFavorite = (id) => {
     }
 }
 
+const removeFavoriteItem = (id) => {
+    const favoriteData = getFavoriteData();
+    const remaining = favoriteData.filter(favoriteId => favoriteId !== id)
+    localStorage.setItem("favorite", JSON.stringify(remaining));
+}
 
-export { addToCart, getCartData, addToFavorite, getFavoriteData };
+
+export { addToCart, getCartData, addToFavorite, getFavoriteData, removeCartItem, removeFavoriteItem, clearCart };

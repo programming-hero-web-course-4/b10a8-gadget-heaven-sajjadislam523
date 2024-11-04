@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 
 const Cart = () => {
-    const { cartItem } = useOutletContext();
+    const { cartItem, handleRemoveCartItem, handleClearCart } =
+        useOutletContext();
     const [sortedCartItems, setSortedCartItems] = useState([]);
 
     useEffect(() => {
@@ -37,7 +38,10 @@ const Cart = () => {
                     >
                         Sort by Price
                     </button>
-                    <button className="px-3 sm:px-4 py-1 sm:py-2 rounded-full font-semibold text-xs sm:text-sm lg:text-base font-sora bg-[#9538E2] text-white">
+                    <button
+                        onClick={handleClearCart}
+                        className="px-3 sm:px-4 py-1 sm:py-2 rounded-full font-semibold text-xs sm:text-sm lg:text-base font-sora bg-[#9538E2] text-white"
+                    >
                         Purchase
                     </button>
                 </div>
@@ -64,7 +68,12 @@ const Cart = () => {
                                     <h2 className="text-xl font-bold text-gray-800">
                                         {item.name}
                                     </h2>
-                                    <button className="p-1 text-red-800 border border-red-800 rounded-full ">
+                                    <button
+                                        onClick={() =>
+                                            handleRemoveCartItem(item.id)
+                                        }
+                                        className="p-1 text-red-800 border border-red-800 rounded-full "
+                                    >
                                         <IoCloseOutline className="text-2xl" />
                                     </button>
                                 </div>

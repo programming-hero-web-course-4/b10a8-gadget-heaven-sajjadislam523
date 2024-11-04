@@ -7,13 +7,13 @@ const Navbar = () => {
     const location = useLocation();
     const isHome =
         location.pathname === "/" ||
-        location.pathname === "/All%20Products" ||
-        location.pathname === "/Laptops" ||
-        location.pathname === "/Smartphones" ||
-        location.pathname === "/Tablets" ||
-        location.pathname === "/Headphones" ||
-        location.pathname === "/Smartwatches" ||
-        location.pathname === "/Gaming";
+        location.pathname === "/category/All%20Products" ||
+        location.pathname === "/category/Laptops" ||
+        location.pathname === "/category/Smartphones" ||
+        location.pathname === "/category/Tablets" ||
+        location.pathname === "/category/Headphones" ||
+        location.pathname === "/category/Smartwatches" ||
+        location.pathname === "/category/Gaming";
 
     const navLinkClass = ({ isActive }) => {
         return `px-2 font-semibold ${

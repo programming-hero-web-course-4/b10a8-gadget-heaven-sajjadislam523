@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, Outlet, useNavigate } from "react-router-dom";
-import { getCartData, getFavoriteData } from "../utils/Index";
+import {
+    getCartData,
+    getFavoriteData,
+    removeCartItem,
+    removeFavoriteItem,
+    clearCart,
+} from "../utils/Index";
 
 const Dashboard = () => {
     const products = useLoaderData();
@@ -26,6 +32,21 @@ const Dashboard = () => {
     useEffect(() => {
         navigate(activeTab === "cart" ? "cart" : "wishlist");
     }, [activeTab, navigate]);
+
+    const handleRemoveCartItem = (productId) => {
+        removeCartItem(productId);
+        setCartItem(cartItem.filter((item) => item.id !== productId));
+    };
+
+    const handleRemoveFavoriteItem = (productId) => {
+        removeFavoriteItem(productId);
+        setFavoriteItem(favoriteItem.filter((item) => item.id !== productId));
+    };
+
+    const handleClearCart = () => {
+        clearCart();
+        setCartItem([]);
+    };
 
     return (
         <div>
@@ -64,7 +85,15 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className="pb-20">
-                <Outlet context={{ cartItem, favoriteItem }} />
+                <Outlet
+                    context={{
+                        cartItem,
+                        favoriteItem,
+                        handleRemoveCartItem,
+                        handleRemoveFavoriteItem,
+                        handleClearCart,
+                    }}
+                />
             </div>
         </div>
     );
