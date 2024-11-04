@@ -2,6 +2,7 @@ import { useNavigate, useOutletContext } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import Modal from "react-modal";
+import image from "../assets/Group.png";
 
 Modal.setAppElement("#root");
 
@@ -116,19 +117,33 @@ const Cart = () => {
                         borderRadius: "10px",
                         maxWidth: "400px",
                         textAlign: "center",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        gap: "10px",
                     },
                     overlay: {
                         backgroundColor: "rgba(0, 0, 0, 0.75)",
                     },
                 }}
             >
-                <h2 className="mb-4 text-lg font-semibold">
-                    Thank you for your purchase!
+                <img src={image} alt="" />
+                <h2 className="mb-4 text-2xl font-semibold font-sora">
+                    Payment Successful
                 </h2>
-                <p>Your order has been processed successfully.</p>
+                <p className="text-xs text-gray-500 sm:text-sm lg:text-base font-sora">
+                    Thanks for Purchasing.
+                </p>
+                <p className="text-xs text-gray-500 sm:text-sm lg:text-base font-sora">
+                    Total cost: $
+                    {sortedCartItems.reduce(
+                        (total, item) => total + item.price,
+                        0
+                    )}
+                </p>
                 <button
                     onClick={closeModal}
-                    className="mt-4 px-4 py-2 rounded-full bg-[#9538E2] text-white font-semibold"
+                    className="mt-2 px-4 py-2 w-full font-sora rounded-full bg-[#9538E2] text-white font-semibold"
                 >
                     Close
                 </button>

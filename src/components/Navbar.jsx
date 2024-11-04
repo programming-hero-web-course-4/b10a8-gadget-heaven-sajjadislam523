@@ -34,9 +34,16 @@ const Navbar = () => {
     };
 
     useEffect(() => {
-        setCartCount(getCartData().length);
-        setFavoriteCount(getFavoriteData().length);
-    }, [cartCount, favoriteCount]);
+        const updateCounts = () => {
+            setCartCount(getCartData().length);
+            setFavoriteCount(getFavoriteData().length);
+        };
+        updateCounts();
+
+        const intervalId = setInterval(updateCounts, 5000);
+
+        return () => clearInterval(intervalId);
+    }, []);
 
     return (
         <div
@@ -135,7 +142,7 @@ const Navbar = () => {
                 >
                     <BsCart3 />
                     {cartCount > 0 && (
-                        <span className="absolute inline-flex items-center justify-center w-5 h-5 text-xs text-white bg-red-500 rounded-full top-1 lg:right-[101px] right-11">
+                        <span className="absolute inline-flex items-center justify-center w-5 h-5 text-xs text-white bg-red-500 rounded-full top-1 lg:right-[101px] right-20">
                             {cartCount}
                         </span>
                     )}
@@ -146,7 +153,7 @@ const Navbar = () => {
                 >
                     <FiHeart />
                     {favoriteCount > 0 && (
-                        <span className="absolute inline-flex items-center justify-center w-5 h-5 text-xs text-white bg-red-500 rounded-full top-1 lg:right-14 right-1">
+                        <span className="absolute inline-flex items-center justify-center w-5 h-5 text-xs text-white bg-red-500 rounded-full top-1 lg:right-14 right-8">
                             {favoriteCount}
                         </span>
                     )}
