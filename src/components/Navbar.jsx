@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { FiHeart } from "react-icons/fi";
 import { getCartData, getFavoriteData } from "../utils/Index";
+import UserContext from "../context/UserContext";
 
 const Navbar = () => {
     const location = useLocation();
-    const [cartCount, setCartCount] = useState(0);
-    const [favoriteCount, setFavoriteCount] = useState(0);
+    const { cartItem, setCartItem, favoriteItem, setFavoriteItem } =
+        useContext(UserContext);
 
     const isHome =
         location.pathname === "/" ||
@@ -32,18 +33,6 @@ const Navbar = () => {
                   }`
         }`;
     };
-
-    useEffect(() => {
-        const updateCounts = () => {
-            setCartCount(getCartData().length);
-            setFavoriteCount(getFavoriteData().length);
-        };
-        updateCounts();
-
-        const intervalId = setInterval(updateCounts, 5000);
-
-        return () => clearInterval(intervalId);
-    }, []);
 
     return (
         <div
@@ -154,22 +143,22 @@ const Navbar = () => {
                     className="p-2 text-black transition bg-white border rounded-full hover:bg-gray-100"
                 >
                     <BsCart3 />
-                    {cartCount > 0 && (
+                    {
                         <span className="absolute inline-flex items-center justify-center w-5 h-5 text-xs text-white bg-red-500 rounded-full top-1 lg:right-[101px] right-20">
-                            {cartCount}
+                            {cartItem.length}
                         </span>
-                    )}
+                    }
                 </Link>
                 <Link
                     to="/dashboard/wishlist"
                     className="p-2 text-black transition bg-white border rounded-full hover:bg-gray-100"
                 >
                     <FiHeart />
-                    {favoriteCount > 0 && (
+                    {
                         <span className="absolute inline-flex items-center justify-center w-5 h-5 text-xs text-white bg-red-500 rounded-full top-1 lg:right-14 right-8">
-                            {favoriteCount}
+                            {favoriteItem.length}
                         </span>
-                    )}
+                    }
                 </Link>
             </div>
         </div>

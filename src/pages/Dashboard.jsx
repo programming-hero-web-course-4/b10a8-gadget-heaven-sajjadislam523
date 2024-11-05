@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import {
     useLoaderData,
     Outlet,
@@ -12,11 +12,12 @@ import {
     removeFavoriteItem,
     clearCart,
 } from "../utils/Index";
+import UserContext from "../context/UserContext";
 
 const Dashboard = () => {
     const products = useLoaderData();
-    const [cartItem, setCartItem] = useState([]);
-    const [favoriteItem, setFavoriteItem] = useState([]);
+    const { cartItem, setCartItem, favoriteItem, setFavoriteItem } =
+        useContext(UserContext);
     const navigate = useNavigate();
     const location = useLocation();
 
