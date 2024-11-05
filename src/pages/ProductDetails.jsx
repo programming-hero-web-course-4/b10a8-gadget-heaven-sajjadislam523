@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { FiHeart } from "react-icons/fi";
-// import { FaStar } from "react-icons/fa";
-import { addToCart, addToFavorite } from "../utils/Index";
-// import Rating from "react-rating";
+import { FaStar } from "react-icons/fa";
+import { addToCart, addToFavorite, getFavoriteData } from "../utils/Index";
+import Rating from "react-rating";
 
 const ProductDetails = () => {
     const data = useLoaderData();
@@ -16,6 +16,11 @@ const ProductDetails = () => {
     useEffect(() => {
         const singleProduct = data.find((product) => product.id === id);
         setProduct(singleProduct || {});
+
+        const favoriteData = getFavoriteData();
+        if (favoriteData.includes(id)) {
+            setIsDisabled(true);
+        }
     }, [data, id]);
 
     const {
@@ -33,8 +38,8 @@ const ProductDetails = () => {
     };
 
     const handleAddToFavorite = (id) => {
-        addToFavorite(id);
         setIsDisabled(true);
+        addToFavorite(id);
     };
 
     return (
@@ -87,12 +92,12 @@ const ProductDetails = () => {
 
                     <div className="flex items-center space-x-2">
                         <p className="font-semibold">Rating:</p>
-                        {/* <Rating
+                        <Rating
                             initialRating={rating}
                             readonly
                             emptySymbol={<FaStar className="text-gray-300" />}
                             fullSymbol={<FaStar className="text-yellow-400" />}
-                        /> */}
+                        />
                         <span className="px-2 ml-2 text-sm text-gray-600 bg-gray-200 rounded-full">
                             {rating}
                         </span>
@@ -108,7 +113,9 @@ const ProductDetails = () => {
                         <button
                             disabled={isDisabled}
                             onClick={() => handleAddToFavorite(id)}
-                            className="p-3 border rounded-full hover:bg-gray-200"
+                            className={`p-3 border rounded-full  ${
+                                isDisabled ? "bg-gray-300" : "hover:bg-gray-200"
+                            }`}
                         >
                             <FiHeart />
                         </button>

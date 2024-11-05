@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { FiHeart } from "react-icons/fi";
-import { getCartData, getFavoriteData } from "../utils/Index";
 import UserContext from "../context/UserContext";
 
 const Navbar = () => {
@@ -19,6 +18,22 @@ const Navbar = () => {
         location.pathname === "/category/Headphones" ||
         location.pathname === "/category/Smartwatches" ||
         location.pathname === "/category/Gaming";
+
+    useEffect(() => {
+        const pageTitles = {
+            "/": "Home | Gadget Heaven",
+            "/statistics": "Statistics | Gadget Heaven",
+            "/dashboard/cart": "Dashboard - Cart | Gadget Heaven",
+            "/dashboard/wishlist": "Dashboard - Wishlist | Gadget Heaven",
+            "/tech-glossary": "TechGlossary | Gadget Heaven",
+            "/product": "Product | Gadget Heaven",
+        };
+        if (location.pathname.startsWith("/product/")) {
+            document.title = "Product Details | Gadget Heaven";
+        } else {
+            document.title = pageTitles[location.pathname];
+        }
+    }, [location]);
 
     const navLinkClass = ({ isActive }) => {
         return `px-2 font-semibold ${
