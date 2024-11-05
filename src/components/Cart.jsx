@@ -55,7 +55,7 @@ const Cart = () => {
                     </button>
                     <button
                         onClick={openModal}
-                        className="px-3 sm:px-4 py-1 sm:py-2 rounded-full font-semibold text-xs sm:text-sm lg:text-base font-sora bg-[#9538E2] text-white"
+                        className="px-3 sm:px-4 py-1 sm:py-2 rounded-full font-semibold text-xs sm:text-sm lg:text-base font-sora bg-gradient-to-b from-[#862eda] via-[#a33de4] to-[#e464e4] text-white"
                     >
                         Purchase
                     </button>

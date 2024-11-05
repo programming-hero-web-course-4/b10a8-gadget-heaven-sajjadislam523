@@ -19,7 +19,7 @@ const ProductCards = () => {
     }, [category, products]);
 
     return (
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4">
             {categoryProducts.map((product) => (
                 <Card key={product.id} product={product} />
             ))}

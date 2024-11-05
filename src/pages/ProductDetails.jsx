@@ -9,6 +9,7 @@ const ProductDetails = () => {
     const { id } = useParams();
 
     const [product, setProduct] = useState({});
+    const [isDisabled, setIsDisabled] = useState(false);
 
     useEffect(() => {
         const singleProduct = data.find((product) => product.id === id);
@@ -31,6 +32,7 @@ const ProductDetails = () => {
 
     const handleAddToFavorite = (id) => {
         addToFavorite(id);
+        setIsDisabled(true);
     };
 
     return (
@@ -46,7 +48,6 @@ const ProductDetails = () => {
                 </p>
             </div>
             <div className="relative flex flex-col justify-center w-[90%] max-w-5xl p-4 mx-auto bg-white border shadow-lg md:flex-row rounded-xl -top-32 lg:w-3/5 lg:p-8">
-                {/* Image Section */}
                 <div className="flex justify-center w-full p-4 md:w-1/2">
                     <img
                         className="object-cover w-full h-auto rounded-lg max-h-[300px]"
@@ -55,7 +56,6 @@ const ProductDetails = () => {
                     />
                 </div>
 
-                {/* Details Section */}
                 <div className="w-full p-4 space-y-4 md:w-1/2">
                     <h1 className="text-2xl font-semibold font-sora">{name}</h1>
                     <p className="font-sora font-bold text-lg text-[#09080FCC]">
@@ -70,7 +70,6 @@ const ProductDetails = () => {
 
                     <p className="text-gray-600 font-sora">{description}</p>
 
-                    {/* Specification Section */}
                     <div className="space-y-2">
                         <p className="font-semibold">Specification:</p>
                         <ul className="space-y-1 text-sm text-gray-700 list-decimal list-inside">
@@ -84,7 +83,6 @@ const ProductDetails = () => {
                         </ul>
                     </div>
 
-                    {/* Rating Section */}
                     <div className="flex items-center space-x-2">
                         <p className="font-semibold">Rating:</p>
                         <div className="flex items-center">
@@ -95,7 +93,6 @@ const ProductDetails = () => {
                         </div>
                     </div>
 
-                    {/* Action Buttons */}
                     <div className="flex items-center gap-4 mt-4">
                         <button
                             onClick={() => handleAddToCart(id)}
@@ -104,6 +101,7 @@ const ProductDetails = () => {
                             Add to Cart <BsCart3 />
                         </button>
                         <button
+                            disabled={isDisabled}
                             onClick={() => handleAddToFavorite(id)}
                             className="p-3 border rounded-full hover:bg-gray-200"
                         >
