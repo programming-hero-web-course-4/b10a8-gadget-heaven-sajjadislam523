@@ -19,6 +19,21 @@ const glossaryData = [
                 definition:
                     "The number of pixels on the screen, often represented as width x height (e.g., 1920x1080). Higher resolutions offer sharper images.",
             },
+            {
+                term: "AMOLED (Active Matrix OLED)",
+                definition:
+                    "A type of OLED display that’s more efficient, providing brighter and clearer visuals, commonly used in smartphones.",
+            },
+            {
+                term: "HDR (High Dynamic Range)",
+                definition:
+                    "A display feature that enhances contrast and color accuracy, creating more realistic visuals.",
+            },
+            {
+                term: "Aspect Ratio",
+                definition:
+                    "The ratio of a display’s width to its height, e.g., 16:9 or 4:3. Affects screen layout and user experience.",
+            },
         ],
     },
     {
@@ -38,6 +53,16 @@ const glossaryData = [
                 term: "GPU (Graphics Processing Unit)",
                 definition:
                     "A specialized processor for handling graphics, important for gaming and media-intensive applications.",
+            },
+            {
+                term: "Cache Memory",
+                definition:
+                    "A small, fast memory located inside the CPU for storing frequently accessed data and instructions.",
+            },
+            {
+                term: "Clock Speed",
+                definition:
+                    "The speed at which a CPU operates, measured in GHz. Higher clock speeds typically mean faster performance.",
             },
         ],
     },
@@ -120,7 +145,7 @@ const TechGlossary = () => {
             {glossaryData.map((category, index) => (
                 <div
                     key={index}
-                    className="mb-4 border border-gray-300 rounded-lg shadow-md"
+                    className="mb-4 border border-gray-300 rounded-lg shadow-md font-sora"
                 >
                     <div
                         className="bg-gray-200 p-4 cursor-pointer font-semibold text-lg flex justify-between items-center"
@@ -133,7 +158,7 @@ const TechGlossary = () => {
                         <div className="p-4 bg-white">
                             {category.terms.map((term, termIndex) => (
                                 <div key={termIndex} className="mb-4">
-                                    <h2 className="text-xl font-medium">
+                                    <h2 className="text-xl font-medium ">
                                         {term.term}
                                     </h2>
                                     <p className="text-gray-700">

@@ -85,7 +85,7 @@ const Navbar = () => {
                             className={({ isActive }) =>
                                 `px-4 py-2 rounded-md ${
                                     isActive ? "font-bold underline" : ""
-                                } ${isHome ? "text-white" : "text-gray-800"}`
+                                } ${isHome ? "text-gray-800" : ""}`
                             }
                         >
                             Home
@@ -95,7 +95,7 @@ const Navbar = () => {
                             className={({ isActive }) =>
                                 `px-4 py-2 rounded-md ${
                                     isActive ? "font-bold underline" : ""
-                                } ${isHome ? "text-white" : "text-gray-800"}`
+                                } ${isHome ? "text-gray-800" : ""}`
                             }
                         >
                             Statistics
@@ -105,10 +105,20 @@ const Navbar = () => {
                             className={({ isActive }) =>
                                 `px-4 py-2 rounded-md ${
                                     isActive ? "font-bold underline" : ""
-                                } ${isHome ? "text-white" : "text-gray-800"}`
+                                } ${isHome ? "text-gray-800" : ""}`
                             }
                         >
                             Dashboard
+                        </NavLink>
+                        <NavLink
+                            to="/tech-glossary"
+                            className={({ isActive }) =>
+                                `px-4 py-2 rounded-md ${
+                                    isActive ? "font-bold underline" : ""
+                                } ${isHome ? "text-gray-800" : ""}`
+                            }
+                        >
+                            Tech Glossary
                         </NavLink>
                     </ul>
                 </div>

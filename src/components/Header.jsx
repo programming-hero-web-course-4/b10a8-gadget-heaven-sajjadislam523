@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -12,9 +13,12 @@ const Header = () => {
                     the next level. From smart devices to the <br /> coolest
                     accessories, we have it all!
                 </p>
-                <button className="px-4 py-2 rounded-full font-semibold font-sora bg-white text-[#9538E2]">
+                <Link
+                    to="/dashboard"
+                    className="px-4 py-2 rounded-full font-semibold font-sora bg-white text-[#9538E2]"
+                >
                     Shop Now
-                </button>
+                </Link>
             </div>
         </div>
     );
