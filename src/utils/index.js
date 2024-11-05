@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const getCartData = () => {
     const cartData = localStorage.getItem("cart");
     if (cartData) {
@@ -13,12 +15,12 @@ const addToCart = (id) => {
     const cartData = getCartData();
 
     if (cartData.includes(id)) {
-        alert("This product already exists in cart");
+        toast.error("This product already exists in the cart.");
         return;
     } else {
         cartData.push(id);
         localStorage.setItem("cart", JSON.stringify(cartData));
-        alert("Product added to cart");
+        toast.success("Product added to cart.");
     }
 };
 
@@ -26,6 +28,7 @@ const removeCartItem = (id) => {
     const cartData = getCartData();
     const remaining = cartData.filter(cartId => cartId !== id)
     localStorage.setItem("cart", JSON.stringify(remaining));
+    toast.info("Item removed from cart.");
 }
 
 const clearCart = () => {
@@ -47,12 +50,12 @@ const addToFavorite = (id) => {
     const favoriteData = getFavoriteData();
 
     if (favoriteData.includes(id)) {
-        alert("This product already exists in favorite");
+        toast.error("This product already exists in favorites.");
         return;
     } else {
         favoriteData.push(id);
         localStorage.setItem("favorite", JSON.stringify(favoriteData));
-        alert("Product added to favorite");
+        toast.success("Product added to favorites.");
     }
 }
 
@@ -60,6 +63,7 @@ const removeFavoriteItem = (id) => {
     const favoriteData = getFavoriteData();
     const remaining = favoriteData.filter(favoriteId => favoriteId !== id)
     localStorage.setItem("favorite", JSON.stringify(remaining));
+    toast.info("Item removed from favorites.");
 }
 
 

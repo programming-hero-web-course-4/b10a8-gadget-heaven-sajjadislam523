@@ -8,6 +8,7 @@ import ProductDetails from "../pages/ProductDetails";
 import Cart from "../components/Cart";
 import WishList from "../components/WishList";
 import NotFound from "../components/NotFound";
+import TechGlossary from "../pages/TechGlossary";
 
 const routes = createBrowserRouter([
     {
@@ -55,6 +56,10 @@ const routes = createBrowserRouter([
                 path: "/product/:id",
                 element: <ProductDetails />,
                 loader: () => fetch("../products.json"),
+            },
+            {
+                path: "tech-glossary",
+                element: <TechGlossary />,
             },
         ],
     },

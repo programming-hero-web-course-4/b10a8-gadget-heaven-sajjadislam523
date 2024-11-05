@@ -132,6 +132,9 @@ const Navbar = () => {
                     <NavLink className={navLinkClass} to="/dashboard">
                         Dashboard
                     </NavLink>
+                    <NavLink className={navLinkClass} to="/tech-glossary">
+                        Tech Glossary
+                    </NavLink>
                 </ul>
             </div>
 
