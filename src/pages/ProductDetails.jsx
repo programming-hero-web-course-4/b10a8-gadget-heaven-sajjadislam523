@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { FiHeart } from "react-icons/fi";
 import { addToCart, addToFavorite } from "../utils/Index";
+import ReactStars from "react-rating-stars-component";
 
 const ProductDetails = () => {
     const data = useLoaderData();
@@ -85,12 +86,17 @@ const ProductDetails = () => {
 
                     <div className="flex items-center space-x-2">
                         <p className="font-semibold">Rating:</p>
-                        <div className="flex items-center">
-                            <span className="text-yellow-400">★★★★☆</span>
-                            <span className="ml-2 text-sm text-gray-600">
-                                {rating}
-                            </span>
-                        </div>
+                        <ReactStars
+                            count={5}
+                            value={rating}
+                            size={24}
+                            activeColor="#ffd700"
+                            color="#d3d3d3"
+                            edit={false}
+                        />
+                        <span className="ml-2 text-sm text-gray-600 bg-gray-200 rounded-full px-2">
+                            {rating}
+                        </span>
                     </div>
 
                     <div className="flex items-center gap-4 mt-4">
