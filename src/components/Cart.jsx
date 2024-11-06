@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import Modal from "react-modal";
 import image from "../assets/Group.png";
+import { GiSettingsKnobs } from "react-icons/gi";
 
 Modal.setAppElement("#root");
 
@@ -49,9 +50,10 @@ const Cart = () => {
                     </p>
                     <button
                         onClick={handleSort}
-                        className="px-3 sm:px-4 py-1 sm:py-2 rounded-full font-semibold text-xs sm:text-sm lg:text-base font-sora border border-[#9538E2] text-[#9538E2]"
+                        className="px-3 sm:px-4 py-1 sm:py-2 rounded-full flex items-center gap-2 font-semibold text-xs sm:text-sm lg:text-base font-sora border border-[#9538E2] text-[#9538E2]"
                     >
                         Sort by Price
+                        <GiSettingsKnobs />
                     </button>
                     <button
                         onClick={openModal}
