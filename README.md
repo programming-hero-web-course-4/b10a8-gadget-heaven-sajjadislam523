@@ -6,6 +6,10 @@ Welcome to Gadget Heaven, a modern e-commerce platform for showcasing and purcha
 
 [Visit Gadget Heaven](https://app-gadget-heaven.netlify.app/)
 
+## 📄 Requirement Document Link
+
+[Requirement](https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08.pdf)
+
 ## 🧩 Project Overview
 
 Gadget Heaven offers a wide range of gadgets, with features that allow users to explore detailed product information, add items to their cart or favorites, and stay updated with tech trends and glossary information. This application is designed to deliver a rich user experience with efficient data management.
