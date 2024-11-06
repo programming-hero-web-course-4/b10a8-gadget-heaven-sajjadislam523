@@ -48,13 +48,13 @@ const ProductDetails = () => {
                 <h1 className="text-3xl font-bold text-white font-sora">
                     Product Details
                 </h1>
-                <p className="text-white font-sora">
+                <p className="text-sm text-white md:text-base font-sora">
                     Explore the latest gadgets that will take your experience to
                     the next level. From smart devices to <br /> the coolest
                     accessories, we have it all!
                 </p>
             </div>
-            <div className="relative flex flex-col justify-center w-[90%] max-w-5xl p-4 mx-auto bg-white border shadow-lg md:flex-row rounded-xl -top-32 lg:w-3/5 lg:p-8">
+            <div className="relative flex flex-col justify-center w-[90%] max-w-5xl p-4 mx-auto bg-white border shadow-lg md:flex-row rounded-xl -top-28 lg:w-3/5 lg:p-8">
                 <div className="flex justify-center w-full p-4 md:w-1/2">
                     <img
                         className="object-cover w-full h-auto rounded-lg max-h-[300px]"

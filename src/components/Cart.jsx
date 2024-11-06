@@ -63,11 +63,11 @@ const Cart = () => {
                     </button>
                 </div>
             </div>
-            <div className="flex flex-col items-center min-h-screen gap-4 p-8 bg-gray-100">
+            <div className="flex flex-col items-center min-h-screen gap-4 p-4 bg-gray-100">
                 {sortedCartItems.map((item) => (
                     <div
                         key={item.id}
-                        className="flex items-center w-full gap-4 p-6 bg-white rounded-lg shadow-md"
+                        className="flex flex-col items-center w-full gap-4 p-6 bg-white rounded-lg shadow-md md:flex-row"
                     >
                         {/* Image Section */}
                         <div className="flex-shrink-0 w-24 h-24 bg-gray-200 rounded-md">

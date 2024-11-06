@@ -22,7 +22,7 @@ const WishList = () => {
                 {favoriteItem.map((item) => (
                     <div
                         key={item.id}
-                        className="flex items-center w-full gap-6 p-6 bg-white border rounded-lg shadow-lg"
+                        className="flex flex-col items-center w-full gap-6 p-6 bg-white border rounded-lg shadow-lg md:flex-row"
                     >
                         {/* Image Section */}
                         <div className="flex-shrink-0 w-24 h-24 bg-gray-200 rounded-md">
